@@ -61,24 +61,24 @@ function loadMovieDetails(){
     });
 }
 
-function displayMovieDetails(details){
+function displayMovieDetails(movieDetails){
     resultGrid.innerHTML = `
     <div class = "movie-poster">
-        <img src = "${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" alt = "movie poster">
+        <img src = "${(movieDetails.Poster != "N/A") ? movieDetails.Poster : "image_not_found.png"}" alt = "movie poster">
     </div>
     <div class = "movie-info">
-        <h3 class = "movie-title">${details.Title}</h3>
+        <h3 class = "movie-title">${movieDetails.Title}</h3>
         <ul class = "movie-misc-info">
-            <li class = "year">Year: ${details.Year}</li>
-            <li class = "rated">Ratings: ${details.Rated}</li>
-            <li class = "released">Released: ${details.Released}</li>
+            <li class = "year">Year: ${movieDetails.Year}</li>
+            <li class = "rated">Ratings: ${movieDetails.Rated}</li>
+            <li class = "released">Released: ${movieDetails.Released}</li>
         </ul>
-        <p class = "genre"><b>Genre:</b> ${details.Genre}</p>
-        <p class = "writer"><b>Writer:</b> ${details.Writer}</p>
-        <p class = "actors"><b>Actors: </b>${details.Actors}</p>
-        <p class = "plot"><b>Plot:</b> ${details.Plot}</p>
-        <p class = "language"><b>Language:</b> ${details.Language}</p>
-        <p class = "awards"><b><i class = "fas fa-award"></i></b> ${details.Awards}</p>
+        <p class = "genre"><b>Genre:</b> ${movieDetails.Genre}</p>
+        <p class = "writer"><b>Writer:</b> ${movieDetails.Writer}</p>
+        <p class = "actors"><b>Actors: </b>${movieDetails.Actors}</p>
+        <p class = "plot"><b>Plot:</b> ${movieDetails.Plot}</p>
+        <p class = "language"><b>Language:</b> ${movieDetails.Language}</p>
+        <p class = "awards"><b><i class = "fas fa-award"></i></b> ${movieDetails.Awards}</p>
     </div>
     
     `;
